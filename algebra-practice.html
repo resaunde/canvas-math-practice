@@ -8,7 +8,14 @@
 
   <title>College Algebra Practice</title>
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathlive"></script>
+<script type="module">
+  import {
+    initVirtualKeyboardInCurrentBrowsingContext
+  } from "https://cdn.jsdelivr.net/npm/mathlive@0.111.4/mathlive.min.mjs";
+
+  window.mathVirtualKeyboard =
+    initVirtualKeyboardInCurrentBrowsingContext();
+</script>
 
   <style>
     body {
@@ -110,8 +117,6 @@
   </p>
 
   <script>
-window.mathVirtualKeyboard =
-  MathLive.initVirtualKeyboardInCurrentBrowsingContext();
     const answerField =
       document.getElementById("student-answer");
 
